@@ -60,29 +60,3 @@ body {
   font-size: 1.1rem;
   border-radius: 5px;
 }
-
-table {
-  font-size: 1.2em;
-  border: #f8f8f8 solid 1px;
-}
-
-.saturday {
-  color: #1464c0; 
-}
-
-.sunday {
-  color: #c7342a;
-}
-
-#buttonBox {
-  margin: 18 0px;
-}
-
-#currentMonth {
-  font-size: 3em;
-}
-
-.currentDayOfMonth {
-  background: #1464c0;
-  color: #FFFFFF;
-}

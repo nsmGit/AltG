@@ -26,12 +26,13 @@ SECRET_KEY = '&tglcx)-1jjodc8)*2y(s(k^^_khshq7^h2e%gx#@ol7(m38rj'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+#ALLOWED_HOSTS = ['AltG2018.2upvtmpnxm.ap-northeast-1.elasticbeanstalk.com']
 
 # Application definition
 
 INSTALLED_APPS = [
     'workStatus.apps.WorkstatusConfig',
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,6 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['workStatus/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
