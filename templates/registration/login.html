@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'workStatus/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'workStatus/css/materialize.min.css' %}" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'workStatus/css/login.css' %}" rel="stylesheet" media="screen,projection"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper teal">
+                <div id="title">Alt:G</div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="form-wrapper">
+        <h1>Alt:G</h1>
+
+        <form method="post" action="{% url 'login' %}"  class="form-wrapper">
+            {% csrf_token %}
+
+            <div class="form-item">
+                <div class="input-field col">
+                    {{ form.username }}
+                    <label for="id_username" class="">Username:</label>
+                </div>
+                <div class="input-field col">
+                    {{ form.password }}
+                    <label for="id_password" class="">Password:</label>
+                </div>
+            </div>
+
+            <div class="button-test">
+                <button type="submlogin.htmlit" class="waves-effect waves-light btn-large light-blue lighten-3">Login</button>
+            </div>
+        </form>
+
+        <div class="form-footer">
+            <a href="accounts:signup" class="signup">Create an account</a>
+            <a href="accounts:signup" class="signup">/workStatus/</a>
+        </div>
+    </div>
+
+  <script type="text/javascript" src="{% static 'workStatus/js/materialize.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'workStatus/js/statusList.js' %}"></script>
+</body>
+
+</html>
