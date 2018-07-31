@@ -11,7 +11,7 @@ window.onload = function () {
       break;
   
     case 2:
-      dowDisp = "(火)"
+      dowDisp = "(火)"
       break;
   
     case 1:
