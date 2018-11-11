@@ -25,4 +25,4 @@ termcolor==1.1.0
 urllib3==1.22
 wcwidth==0.1.7
 win-inet-pton==1.0.1
-wincertstore==0.2
+wincertstore==0.2 
